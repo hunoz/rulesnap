@@ -1,4 +1,4 @@
-import type { CoBSchema, LocalizationSchema } from './translations/castles-of-burgundy/schema';
+import type { CoBSchema } from './translations/castles-of-burgundy/schema';
 import { CommonSchema } from './translations/common/schema';
 
 declare module 'i18next' {
