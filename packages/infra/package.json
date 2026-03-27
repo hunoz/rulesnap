@@ -1,5 +1,5 @@
 {
-    "name": "@bg-tldr-guides/infra",
+    "name": "@rulesnap/infra",
     "private": true,
     "version": "0.0.0",
     "scripts": {

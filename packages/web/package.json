@@ -1,5 +1,5 @@
 {
-    "name": "@bg-tldr-guides/web",
+    "name": "@rulesnap/web",
     "private": true,
     "version": "0.0.0",
     "type": "module",
