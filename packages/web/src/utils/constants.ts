@@ -11,3 +11,9 @@ export const games: { id: GameId; label: string; icon: string }[] = gameIds.map(
     label: t('app.title', { ns: id }),
     icon: t('app.icon', { ns: id }),
 }));
+
+export const gameLinks: { [game: GameId]: { bggLink: string; } } = {
+    'castles-of-burgundy': {
+        bggLink: 'https://boardgamegeek.com/boardgame/271320/the-castles-of-burgundy',
+    },
+}

@@ -104,6 +104,15 @@
     letter-spacing: 0.19rem;
 }
 
+.cob .hero a.crest {
+    text-decoration: none;
+}
+
+.cob .hero h1 a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .cob .hero .subtitle {
     color: #c9a84c;
     font-size: 1.3rem;

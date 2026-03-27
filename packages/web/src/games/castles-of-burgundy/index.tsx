@@ -15,6 +15,8 @@ import { useSideNavStore } from '@/stores/sidenav';
 import { getBackItem, getGameItems } from '@/utils/sidenav';
 import type { NavGroup } from '@/components/SideNav';
 import { useNavigate } from '@tanstack/react-router';
+import { gameLinks } from '@/utils/constants';
+import SecureLink from '@/components/SecureLink';
 
 export default function CastlesOfBurgundy() {
     const common = useTranslation('common');
@@ -70,8 +72,21 @@ export default function CastlesOfBurgundy() {
     return (
         <div className='cob'>
             <div className='hero'>
-                <span className='crest'>🏰</span>
-                <h1>{cob.t('app.title')}</h1>
+                <SecureLink
+                    to={gameLinks['castles-of-burgundy'].bggLink}
+                    target='_blank'
+                    className='crest'
+                >
+                    🏰
+                </SecureLink>
+                <h1>
+                    <SecureLink
+                        to={gameLinks['castles-of-burgundy'].bggLink}
+                        target='_blank'
+                    >
+                        {cob.t('app.title')}
+                    </SecureLink>
+                </h1>
                 <p className='subtitle'>{cob.t('app.subtitle')}</p>
             </div>
 
