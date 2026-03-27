@@ -37,7 +37,6 @@ export default function SideNav({ groups }: SideNavProps) {
                 for (const entry of entries) {
                     if (entry.isIntersecting) {
                         setActiveId(entry.target.id);
-                        history.replaceState(null, '', `#${entry.target.id}`);
                     }
                 }
             },
@@ -76,12 +75,20 @@ export default function SideNav({ groups }: SideNavProps) {
             e.preventDefault();
             const el = document.getElementById(item.id);
             if (el) {
-                el.scrollIntoView({ behavior: 'smooth' });
                 setActiveId(item.id);
                 history.pushState(null, '', `#${item.id}`);
+
+                if (window.innerWidth < 768) {
+                    setIsOpen(false);
+                    // Wait for the sidenav close transition to finish before scrolling
+                    setTimeout(() => {
+                        el.scrollIntoView({ behavior: 'smooth' });
+                    }, 300);
+                } else {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                }
             }
         }
-        if (window.innerWidth < 768) setIsOpen(false);
     };
 
     return (
