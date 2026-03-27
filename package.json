@@ -1,5 +1,6 @@
 {
     "private": true,
+    "packageManager": "pnpm@8.15.1",
     "scripts": {
         "web:dev": "pnpm --filter @rulesnap/web dev",
         "web:build": "pnpm --filter @rulesnap/web build",
